@@ -1,0 +1,16 @@
+[workspace]
+name = "so-arm-101-simple-task"
+channels = ["robostack-jazzy", "conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.12.*"
+ros-jazzy-ros-base = "*"
+colcon-common-extensions = "*"
+
+[pypi-dependencies]
+lerobot = ">=0.4.0"
+
+[tasks]
+build = "colcon build --symlink-install"
+rollout = { cmd = "bash -lc 'source install/setup.bash && exec ros2 run so_arm101_rollout rollout {args}'", depends-on = ["build"] }

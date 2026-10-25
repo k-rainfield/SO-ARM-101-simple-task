@@ -1,2 +1,7 @@
 checkpoints
 local
+__pycache__/
+*.py[cod]
+build/
+install/
+log/
