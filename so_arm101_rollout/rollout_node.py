@@ -22,7 +22,7 @@ class RolloutNode(Node):
         self.declare_parameter("camera_height", 480)
         self.declare_parameter("camera_fps", 30)
         self.declare_parameter("task", "SO-ARM-101 ACT rollout")
-        self.declare_parameter("duration", 30.0)
+        self.declare_parameter("duration", 20.0)
         self.declare_parameter("policy_device", "")
         self.declare_parameter("lerobot_command", "lerobot-rollout")
         self.declare_parameter("extra_args", "")
